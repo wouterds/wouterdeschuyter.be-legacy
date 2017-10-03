@@ -55,6 +55,15 @@ def deployStaging() {
 
   // Make directory, in case it doesn't exist
   sh 'ssh wouterds@'+SERVER+' "mkdir -p '+folder+'"'
+
+  // Copy our docker-compose files to the server
+  sh 'scp docker/docker-compose.yml wouterds@'+SERVER+':'+folder+'/docker-compose.yml'
+  // sh 'scp docker/docker-compose-staging.yml wouterds@'+SERVER+':'+folder+'/docker-compose-staging.yml'
+  // sh 'scp .env.example wouterds@'+SERVER+':'+folder+'/.env'
+
+  // // Deploy on staging
+  // sh 'ssh wouterds@'+SERVER+' "cd '+folder+'; docker-compose -f docker-compose.yml -f docker-compose-staging.yml pull"'
+  // sh 'ssh wouterds@'+SERVER+' "cd '+folder+'; docker-compose -f docker-compose.yml -f docker-compose-staging.yml up -d"'
 }
 
 
