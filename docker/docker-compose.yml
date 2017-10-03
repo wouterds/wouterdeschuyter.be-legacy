@@ -2,7 +2,7 @@ version: '2'
 
 services:
   nginx:
-    image: nginx:1.13-alpine
+    build: nginx
     container_name: wouterdeschuyter-website-nginx
     working_dir: /code
     env_file:
