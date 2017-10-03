@@ -18,8 +18,8 @@ clean:
 	-rm -rf ./.version
 	-rm -rf ./node_modules
 	-rm -rf ./vendor
+	-rm -rf ./public/static
 	-rm -f ./.build-*
-	-rm -f ./public/static
 	-rm -f ./composer.phar
 
 composer.phar:
