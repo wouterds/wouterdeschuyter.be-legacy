@@ -13,8 +13,8 @@ const paths = {
     scripts: './public/static/js',
   },
   resources: {
-    styles: './resources/styles',
-    scripts: './resources/scripts',
+    styles: './resources/assets/styles',
+    scripts: './resources/assets/scripts',
   },
 };
 
