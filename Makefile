@@ -54,6 +54,7 @@ new-migration: vendor
 	touch .build-php-fpm
 
 build: .build-app .build-nginx .build-php-fpm
+	-git fetch --all
 	-git describe --abbrev=0 --tags > ./.version
 	-git rev-list --tags --max-count=1 >> ./.version
 
